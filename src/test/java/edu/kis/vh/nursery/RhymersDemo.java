@@ -21,6 +21,7 @@ class RhymersDemo {
         java.util.Random rn = new java.util.Random();
         for (int i = 1; i < 15; i++)
             rhymers[3].countIn(rn.nextInt(20));
+        // TODO: Zdefiniuj zakres losowych liczb jako stale dla lepszej czytelnosci.
 
         for (int i = 0; i < rhymers.length; i++) {
             while (!rhymers[i].callCheck())
@@ -30,6 +31,8 @@ class RhymersDemo {
 
         System.out.println("total rejected is "
                 + ((HanoiRhymer) rhymers[3]).reportRejected());
+        // TODO: Unikaj uzywania magicznych liczb (to 3) w kodzie.Lepiej jest zdefiniowac stala albo uzycie enuma do indeksu HanoiRhymer.
+
     }
 
 }
